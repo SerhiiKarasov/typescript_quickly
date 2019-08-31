@@ -31,7 +31,26 @@ function getFinalPrice(price: number, discount: number) {
 console.log(getFinalPrice(100, 10));
 console.log(getFinalPrice(100, "10%"));
 ```
-* run this code
+* run this code, note that js code would be generated even even with error being printed
 ```
 tsc main
+```
+* or run with compile option that will block generation of .js file
+```
+tsc main --noEmitOnError true
+```
+* you can use --t option to choose JS syntax
+```
+tsc --t ES5 main
+```
+* it is possible to preconfigure the compilation(source, target, directories), need to create the file tsconfiguration.json
+```javascript
+{
+  "compilerOptions": {
+      "baseUrl": "src",
+      "outDir": "./dist",
+      "noEmitOnError": true,
+      "target": "es5"
+  }
+}
 ```
