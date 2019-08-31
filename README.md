@@ -12,5 +12,14 @@
 * list of languages that compiles to js: https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js
 * TypeScript follows the latest specifications of ECMAScript and adds to them types, interfaces, decorators, class member variables (fields), generics, enums, the keywords public, protected, and private and more.
 * TS roadmap: https://github.com/Microsoft/TypeScript/wiki/Roadmap
-### deploying app written in ts
+## deploying app written in ts
 * Ts files (a.ts, b.ts) -> complied > Js files(a.js, b.js) -> bundle -> Js file(main.js) ->deploy -> Js engine(main.js)
+* Bundlers like Webpack or Rollup, only concatenate multiple JavaScript files, but can optimize the code and remove unused code (a.k.a. perform tree-shaking). 
+* js code may not be rewritten to ts,e definition files with the name extension .d.ts can be used for type checking
+
+## Using TypeScript compiler
+```
+npm -v
+npm install -g typescript
+tse -v
+```
