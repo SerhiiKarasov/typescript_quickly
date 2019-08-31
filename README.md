@@ -54,3 +54,27 @@ tsc --t ES5 main
   }
 }
 ```
+* to start project(actually to create tsconfiguration.json file)
+```
+tsc --init
+```
+* in tsconfiguration.json it is possible to inherit configuration using extend control word
+* REPL(Read-Evaluate-Print-Loop) executes your code in interactive console mode
+* Good to install in vscode
+TSLint - integrated the TypeScript linter,
+Prettier - code formatter,
+Path Intellisense - auto-completes file paths.
+* online ide based on vscode - https://stackblitz.com/
+
+
+
+#  2 Basic and custom types
+* The type can be assigned to a variable either explicitly by a software developer or implicitly (a.k.a. inferred types) 
+## 2.1.1  Basic type annotations
+```
+let firstName: string;
+let age: number;
+```
+
+
+
