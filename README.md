@@ -85,5 +85,18 @@ let age: number;
 * unknown - a counterpart of any but no operations are permitted on an unknown without first asserting or narrowing to a more specific type.
 * never - for representing an unreachable code (we’ll provide an example shortly)
 * void - an absence of a value
+* Symbol - immutable, and unique. Sym1 is not eq sym2
+```
+const sym1 = Symbol("orderID");
+const sym2 = Symbol("orderID");
+```
+```
+const ord = Symbol('orderID');
 
+const myOrder = {
+    ord: "123"
+};
 
+console.log(myOrder['ord']);
+```
+* Typescript also has null and undefined(not assigned or function that do not return value) values
