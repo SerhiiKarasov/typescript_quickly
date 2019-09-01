@@ -71,10 +71,19 @@ Path Intellisense - auto-completes file paths.
 #  2 Basic and custom types
 * The type can be assigned to a variable either explicitly by a software developer or implicitly (a.k.a. inferred types) 
 ## 2.1.1  Basic type annotations
+* add a colon and a type annotation to specify the variable type
 ```
 let firstName: string;
 let age: number;
 ```
-
+## Types:
+* string - for textual data
+* boolean - for true/false values
+* number - for numeric values
+* symbol - unique value created by calling the Symbol constructor
+* any - for variables that can hold values of various types, which may be unknown when you write code
+* unknown - a counterpart of any but no operations are permitted on an unknown without first asserting or narrowing to a more specific type.
+* never - for representing an unreachable code (we’ll provide an example shortly)
+* void - an absence of a value
 
 
