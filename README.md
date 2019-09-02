@@ -100,3 +100,18 @@ const myOrder = {
 console.log(myOrder['ord']);
 ```
 * Typescript also has null and undefined(not assigned or function that do not return value) values
+* function that returns string or null
+```
+function getName(): string | null
+{
+
+};
+```
+* any type, to this variable can assign numeric, textual, boolean or custom type, but that is not an optimal behaviour
+* never type - assigned to function that never returns or just throws an error
+```
+const logger = () =>
+{
+  ...
+};
+```
