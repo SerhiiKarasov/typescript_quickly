@@ -1,0 +1,16 @@
+{
+  "name": "paragraph6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "source_map.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  }
+}

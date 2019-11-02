@@ -8,3 +8,4 @@ var myRectangle = { kind: "rectangle", width: 10, height: 20 };
 console.log("Rectangle's area is " + area(myRectangle));
 var myCircle = { kind: "circle", radius: 10 };
 console.log("Circle's area is " + area(myCircle));
+//# sourceMappingURL=discriminated_union.js.map
