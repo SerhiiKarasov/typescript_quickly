@@ -4,6 +4,6 @@
         "tslint:recommended"
     ],
     "jsRules": {},
-    "rules": {"no-consecutive-blank-lines": false},
+    "rules": {},
     "rulesDirectory": []
 }
