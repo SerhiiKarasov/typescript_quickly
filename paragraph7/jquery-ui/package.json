@@ -1,0 +1,11 @@
+{
+  "name": "jquery-ui-example",
+  "description": "A code sample",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/es6-shim": "^0.31.39",
+    "@types/jquery": "^3.3.31",
+    "@types/jqueryui": "^1.12.7",
+    "typescript": "^3.7.4"
+  }
+}
