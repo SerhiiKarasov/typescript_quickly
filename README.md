@@ -1,4 +1,4 @@
-# typescript project how to
+# simples typescript project how to
 
 *  install typescript compiler
 ```
@@ -26,11 +26,49 @@ tsc greeter.ts
     </body>
 </html>
 ```
-* run via browser
+* run via browser(ctrl + shift + k to see the webconsole)
 ```
 firefox greeter.html
 ```
 * run via node
 ```
 node greeter.js
+```
+# Typescript project structure
+* package.json - dependencies
+```
+{
+  "name": "sample project",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "serve",
+    "tsc": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.1",
+    "typescript": "~3.0.0"
+  }
+}
+```
+* tsconfig.json - typescript compiler's options
+```
+{
+  "compilerOptions": {
+  	"module": "commonjs",
+    "outDir": "./dist",
+    "target": "es2015",
+    "lib": [
+      "es2015"
+    ]
+  }
+}
+`lib` specify the symbols only. Libs: github.com/Microsoft/TypeScript/tree/master/lib.   
+`module` choose between commonjs and amd formats of module split.  
+```
+* necessary commands 
+```
+npm install
+//for console npm install @types/node
+npm run tsc
 ```
