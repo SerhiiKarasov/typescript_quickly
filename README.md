@@ -71,4 +71,6 @@ node greeter.js
 npm install
 //for console npm install @types/node
 npm run tsc
+// to check
+// npm run tsc --project tsconfig.json
 ```
