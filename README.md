@@ -91,3 +91,34 @@ npm run tsc
   }
 }
 ```
+
+# how to inherit base tsconfig.json
+```
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs"
+  }
+}
+```
+# run scripts to deploy package
+```
+{
+  "name": "TypeScript_Quickly_chapter9",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "serve",
+    "compileDeploy": "tsc && npm run deploy",
+    "deploy": "copyfiles -f src/browser/*.html src/browser/*.css dist"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.1",
+    "serve": "^10.0.1",
+    "copyfiles": "^2.1.0",
+    "typescript": "~3.0.0"
+  }
+}
+```
+* https://docs.npmjs.com/misc/scripts (postpack, prepack, publish, preinstall, install, version, preversion, postversion, pretest, test, posttest)
+* start - starts web server on the localhost's port 500. 
