@@ -1,4 +1,4 @@
-# simples typescript project how to
+# simplest typescript project how to
 
 *  install typescript compiler
 ```
@@ -73,4 +73,21 @@ npm install
 npm run tsc
 // to check
 // npm run tsc --project tsconfig.json
+```
+
+# source map how to
+* tsconfig.json
+```
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "./dist",
+    "target": "es5",
+    "module": "es6",
+    "lib": [
+      "dom",
+      "es2018"
+    ]
+  }
+}
 ```
