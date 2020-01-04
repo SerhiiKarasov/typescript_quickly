@@ -74,6 +74,11 @@ npm run tsc
 // to check
 // npm run tsc --project tsconfig.json
 ```
+# vue.js project
+* src/components - ui components. vue files
+* sec/lib - app logic
+* .env - environment variables
+* babel.config.js - babel configuration
 
 # source map how to
 * tsconfig.json
