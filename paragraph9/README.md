@@ -1,7 +1,7 @@
 # Getting started
 
 ````
-npm install
-tsc
+npm run compileDeploy
 npm start
+in browser go to dist folder
 ````
