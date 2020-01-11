@@ -98,3 +98,11 @@ exampleSocket.onmessage = function(event) {
 ```
 exampleSocket.close();
 ```
+
+# how to run test
+```
+npm install
+npm run build:server
+node build/server/simple-websocket-server.js
+firefox  localhost:8000
+```
