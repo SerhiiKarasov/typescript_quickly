@@ -1,8 +1,8 @@
 {
-    "extends":"../../tsconfig.json",
-    "compilerOptions": {
-        "module" : "ES2015",
-        "outDir": "../../public",
-        "inlineSources": true
-    }
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "es2015",
+    "outDir": "../../public",
+    "inlineSources": true
+  }
 }
