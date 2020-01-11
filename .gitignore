@@ -2,3 +2,4 @@ node_modules/
 .tox/
 package-lock.json
 dist/
+*.js.map
