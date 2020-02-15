@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "read-file": {
+    "router": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -14,15 +14,14 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "outputPath": "dist/read-file",
+            "outputPath": "dist/router",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/data"
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -64,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "read-file:build"
+            "browserTarget": "router:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "read-file:build:production"
+              "browserTarget": "router:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "read-file:build"
+            "browserTarget": "router:build"
           }
         },
         "test": {
@@ -110,5 +109,5 @@
       }
     }
   },
-  "defaultProject": "read-file"
+  "defaultProject": "router"
 }
