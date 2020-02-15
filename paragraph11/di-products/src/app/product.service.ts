@@ -10,6 +10,6 @@ export class ProductService {
     return { id: 0, 
             title: "Samsung s20",
             price: 1049.99,
-            description: "The latest iPhone" };
+            description: "The latest samsung" };
   }
 }
