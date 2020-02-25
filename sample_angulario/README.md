@@ -68,3 +68,20 @@ export class HeroesComponent implements OnInit {
   };
 ...
 ```
+# 7) Add input field in the application.
+update heroes.component.html
+```
+<div>
+    <label>name:
+        <input [(ngModel)]="hero.name" placeholder="name" />
+    </label>
+</div>
+```
+* [(ngModel)] is Angular's two-way data binding syntax. Here it binds the hero.name property to the HTML textbox so that data can flow in both directions: from the hero.name property to the textbox, and from the textbox back to the hero.name.Although ngModel is a valid Angular directive, it isn't available by default. It belongs to the optional FormsModule and you must opt-in to using it.
+Hence import module in app.module.ts
+```
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+...
+  FormsModule
+```
+
