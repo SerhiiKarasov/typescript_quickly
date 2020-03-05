@@ -82,6 +82,23 @@ Hence import module in app.module.ts
 ```
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 ...
-  FormsModule
+imports: [
+    ...,
+  FormsModule,
+  ...
+],
 ```
 
+# 8) Declare HeroesComponent
+* every component must be declared in exactly one NgModule.
+* cli declared compoment in src/app/app.module.ts
+```
+declarations: [
+  AppComponent,
+  HeroesComponent
+],
+```
+* cli imported component in src/app/app.module.ts
+```
+import { HeroesComponent } from './heroes/heroes.component';
+```
