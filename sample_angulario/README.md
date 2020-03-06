@@ -102,3 +102,26 @@ declarations: [
 ```
 import { HeroesComponent } from './heroes/heroes.component';
 ```
+
+# 9) Mock data 
+* create src/app/mock-heroes.ts 
+```
+import { Hero } from './hero';
+
+export const HEROES: Hero[] = [
+  { id: 11, name: 'Dr Nice' },
+  { id: 12, name: 'Narco' },
+  { id: 13, name: 'Bombasto' }
+];
+```
+
+# 10) import mocked data 
+* in src/app/heroes/heroes.component.ts
+```
+import { HEROES } from '../mock-heroes';
+export class HeroesComponent implements OnInit {
+
+  heroes = HEROES;
+}
+```
+* in src/app/heroes/heroes.component.html
