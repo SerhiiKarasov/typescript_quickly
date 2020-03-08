@@ -1,17 +1,11 @@
 import React, { useState, ChangeEvent, useEffect, FormEvent } from "react";
 import "./App.css";
+import { Weather } from "./weather";
+import WeatherInfo from "./weather-info";
 
 const baseUrl = "http://api.openweathermap.org/data/2.5/weather?q=";
 const suffix = "&units=metric&appid=30f4128a2113cecad08fd71fc4cfd0a4";
-
-export interface Weather {
-  city: string;
-  humidity: number;
-  pressure: number;
-  temp: number;
-  temp_max: number;
-  temp_min: number;
-}
+const has = (value: any): value is boolean => !!value;
 
 interface State {
   titleName: string;
@@ -25,9 +19,8 @@ interface State {
 // };
 
 function App() {
-  
-
   const [city, setCity] = useState("London");
+  const [msgFromChild, setMsgFromChild] = useState('');
   const [weather, setWeather] = useState<Weather | null>(null);
   const [state, setState] = useState<State>({
     titleName: "Weather info",
@@ -62,16 +55,25 @@ function App() {
     console.log(weather);
   };
 
+  const getMsgFromChild = (msg: string) => setMsgFromChild(msg);
+
   return (
     <div style={myStyles} className="App">
       <h1>{state.titleName}</h1>
       <img src={state.imageUrl} alt="" />
-      <form>
-        <input type="text" placeholder="Enter city" onChange={handleChange} />
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Enter city" onInput={handleChange} />
         <button type="submit">Get weather</button>
         <h2>Location: {city}</h2>
-        {weather && <h2>Temperature: {weather.temp}°C</h2>}
       </form>
+
+      {msgFromChild}
+      {has(weather) ? (
+        <WeatherInfo weather={weather} parentChannel={getMsgFromChild}>
+        </WeatherInfo>
+      ) : (
+        <h2>No weather available</h2>
+      )}
     </div>
   );
 }
